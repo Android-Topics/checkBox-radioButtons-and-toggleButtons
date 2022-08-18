@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -31,6 +32,18 @@ public class MainActivity extends AppCompatActivity {
         statusToggleBtn = findViewById(R.id.statusID);
 
 
+        statusToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    statusToggleBtn.setTextOn("Active");
+                    Toast.makeText(MainActivity.this, "You are now online", Toast.LENGTH_SHORT).show();
+                }else {
+                    statusToggleBtn.setTextOff("InActive");
+                    Toast.makeText(MainActivity.this, "You are now going offline", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     // checking a checkbox is checked or not in Java codes
@@ -47,4 +60,22 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    // which radio button is selected in android studio
+    public void selectedRadioButton(View view){
+        boolean selected = ((RadioButton) view).isChecked();
+        switch (view.getId()){
+            case R.id.maleID:
+                if (selected)
+                    Toast.makeText(this, "You are a male gender", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.femaleID:
+                if (selected)
+                    Toast.makeText(this, "You are a female gender", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    // which state is toggled in toggleButton
+
 }
