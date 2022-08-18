@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         statusToggleBtn = findViewById(R.id.statusID);
 
 
+        statusToggleBtn.setText("InActive");
         statusToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -75,7 +76,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
-    // which state is toggled in toggleButton
-
 }
