@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId()){
             case R.id.newsCheckBoxID:
-                Toast.makeText(this, "You will be receiving news updates", Toast.LENGTH_SHORT).show();
+                if (checked)
+                    Toast.makeText(this, "You will be receiving news updates", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.termsCheckBoxID:
-                Toast.makeText(this, "You just agreed to our terms and conditions", Toast.LENGTH_SHORT).show();
+                if (checked)
+                    Toast.makeText(this, "You just agreed to our terms and conditions", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
