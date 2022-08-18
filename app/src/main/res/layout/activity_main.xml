@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="40dp"
+    tools:context=".MainActivity">
+
+    <!--  how to create  Check box in android xml-->
+    <CheckBox
+        android:id="@+id/newsCheckBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send me newsletters"
+        android:onClick="checkBoxChecked"
+        />
+    <CheckBox
+        android:id="@+id/termsCheckBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agree to terms"
+        android:onClick="checkBoxChecked"
+        />
+    <!--  How to create Radio button in android xml-->
+    <RadioGroup
+        android:id="@+id/radioGroupID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/maleID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            />
+        <RadioButton
+            android:id="@+id/femaleID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            />
+
+    </RadioGroup>
+
+    <!-- How to create a toggle button in android xml-->
+    <ToggleButton
+        android:id="@+id/statusID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active"/>
+</LinearLayout>
